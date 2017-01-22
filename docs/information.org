@@ -1,0 +1,19 @@
+#+options: toc:nil
+#+OPTIONS: html-postamble:nil
+#+title: Watch out! You were linked to a data URI.
+
+There is a new phishing exploit going around in which [[https://www.wordfence.com/blog/2017/01/gmail-phishing-data-uri/][data URIs]] are being used for phishing.
+In one particularly nasty exploit, links are made to look like GMail attachments.
+
+A browser extension that you (or someone who cares about you) installed has redirected you from the data URI you clicked on to this informative page.
+
+If you are *sure* the page you clicked on is not malicious... 
+
+1. Navigate to =chrome://extensions= and disable *Block data URI attack* (uncheck "Enabled").
+2. Follow through to your link.
+3. Navigate to =chrome://extensions= and /re-enable/ *Block data URI attack*.
+
+Tips for general safety:
+
+- Check for [[https://support.google.com/chrome/answer/95617?hl=en][the green lock in your address bar]] when you enter your password
+- Turn on [[https://www.google.com/landing/2step/][2-step verification]] on your Google (and other!) online accounts.
