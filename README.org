@@ -1,0 +1,34 @@
+* Block data URI attack
+
+Lately, [[https://www.wordfence.com/blog/2017/01/gmail-phishing-data-uri/][an exploit has been floating around]] that relies on data urls to deliver malicious (phishing) sites.
+Briefly, clicking what appears to be a gmail attachment delivers the user to a data url, from which a phishing site is loaded.
+To counter this attack, users would need to pay careful attention to their address bar.
+
+This plugin addresses this exploit by searching the page for all urls with =data:= URIs, and replaces them with links to an informaive URL.
+
+** Limitations
+
+Ideally, we would just block the user from visiting any data: url. Unfortunately, Chrome extensions' webRequest API won't allow us to do this:
+
+
+#+BEGIN_QUOTE
+The webRequest API only exposes requests that the extension has permission to see, given its host permissions. Moreover, only the following schemes are accessible: http://, https://, ftp://, file://, or chrome-extension://.
+#+END_QUOTE
+
+[[https://developer.chrome.com/extensions/webRequest#event-onBeforeRequest][via]].
+
+Chrome should really fix this. 
+
+In the meantime, we take a much grosser approach: We scan the page for all links (=a=) with an =href= point to a url starting in =data:=. We then replace these =href=s to a link with some information about this attack.
+
+Since attackers could change the page, we repeat this search-and-replace on an interval.
+
+** Notes
+
+While 2-factor authentication is not a pancea, you should definitely enable it; it makes phishing schemes like this one far more likely to be successful.
+
+Also, you should check the lock in your address bar, to make sure the certificate is really signed to the organization you think you're authenticating with.
+
+** License
+
+BSD
