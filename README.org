@@ -6,6 +6,15 @@ To counter this attack, users would need to pay careful attention to their addre
 
 This plugin addresses this exploit by searching the page for all urls with =data:= URIs, and replaces them with links to an informaive URL.
 
+** Installing
+
+I will submit this plugin to Google. But, the approval process may take a while. To install in the meantime:
+
+- Clone this repository.
+- Navigate to chrome://extensions
+- Drag the =chrome-ext= folder into your broser window.
+- Check Enabled.
+
 ** Limitations
 
 Ideally, we would just block the user from visiting any data: url. Unfortunately, Chrome extensions' webRequest API won't allow us to do this:
