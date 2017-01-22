@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Block data URI attack",
-  "description": "This extension prevents against phishing scheme in which attackers link to a data url to inject malicious code, by blocking all clickable links to data urls.",
+  "short_name": "block-data-uri",
+  "description": "This extension prevents against phishing scheme in which attackers link to a data url to inject malicious code",
   "version": "1.0",
   "icons": {
     "16": "icons/16.png",
