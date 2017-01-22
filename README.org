@@ -10,7 +10,7 @@ This plugin addresses this exploit by searching the page for all urls with =data
 
 I will submit this plugin to Google. But, the approval process may take a while. To install in the meantime:
 
-- Download [[https://github.com/elsehow/Block-data-uri-attack/blob/master/chrome-ext.zip][the extension .zip]] and unzip.
+- Download [[https://github.com/elsehow/Block-data-uri-attack/raw/master/chrome-ext.zip][the extension.zip]] and unzip.
 - Navigate to chrome://extensions
 - Drag the unzipped =chrome-ext= folder into your browser window.
 - Check Enabled.
