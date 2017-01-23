@@ -34,7 +34,7 @@ Since attackers could change the page, we repeat this search-and-replace on an i
 
 ** Notes
 
-While 2-factor authentication is not a pancea, you should definitely enable it; it makes phishing schemes like this one far more likely to be successful.
+While 2-factor authentication is not a pancea, you should definitely enable it; it makes phishing schemes like this one far less likely to succeed.
 
 Also, you should check the lock in your address bar, to make sure the certificate is really signed to the organization you think you're authenticating with.
 
